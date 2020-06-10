@@ -1,0 +1,9 @@
+torch
+tqdm
+requests
+pathlib
+numpy
+pillow
+matplotlib
+time
+
