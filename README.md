@@ -2,6 +2,10 @@
 
 Customized image classification network using PyTorch. 88% ACC on test.
 
+The dataset I used consists of two classes, human and plants, collected from ImageNet.
+The network I designed use the basic of CNN, batch normalization, RELU.
+It supports simple hyper parmetric search for things like learning rate using validation dataset.
+
 ## Geting Started
 
 ### Prerequites
@@ -33,28 +37,25 @@ It will train MyNet to classify between two classes; human and plants.
 python train.py
 ```
 
-Before running, make sure you set DOWNLOAD_DATASET = True, so you can download the some portion of dataset that I selected from ImageNet
+Before running, make sure you set DOWNLOAD_DATASET = True, so you can download the some portion of dataset that I selected from ImageNet.
 Once you run the train.py, it will automatically get urls of those, then download the actual images into /data.
 It will split dataset into train, validation, and test, and build numpy serialized dataset.
-
-The dataset I used consists of two classes, human and plants.
-The network I designed use the basic of CNN, batch normalization, RELU.
-It supports simple hyper parmetric search for things like learning rate using validation dataset.
 
 ## Logging
 Loss and accuracy for every epoch in the training will be logged into /log.
 Important for hyperparmeter optimization.
+![Alt text](assets/MyNet5Loss.png?raw=true "Title")
+![Alt text](assets/MyNet5Acc.png?raw=true "Title")
 
 ## Directory Sturcture
 The trained models will be saved into /models
+![Alt text](assets/directory.png?raw=true "Title")
 
-### Testing
-
-## Test Result
+## Testing
 The test accuracy is 0.8869. Not so impressive, but the code is simple enough for the AI novice to see the whole CNN buildup.
-
+![Alt text](assets/test.png?raw=true "Title")
 ## Authors
-* **Hong-In Lee** - *Simple CNN* - [theorist17](https://github.com/theorist17)
+* **Hong-In Lee** - *SimpleCNN* - [theorist17](https://github.com/theorist17)
 
 ## Acknowledgements 
 
